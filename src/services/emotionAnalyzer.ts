@@ -11,7 +11,7 @@ const EMOTION_LEXICON: LexiconScore[] = [
     emotion: 'anger',
     weight: 2.6,
     words: [
-      // Direct customer anger profanity & explicit exasperation (uncensored)
+      // Direct customer anger profanity & explicit exasperation terms
       'fuck', 'fucking', 'fucked', 'fucks', 'fucker', 'motherfucker', 'what the fuck', 'wtf',
       'hell', 'what the hell', 'hell no', 'to hell with',
       'sucks', 'suck', 'sucked', 'sucking',
@@ -289,7 +289,7 @@ export function analyzeEmotionLocally(
         ? `Customer hostility and explicit exasperation detected ("${detectedRawAnger.slice(0, 3).join('", "')}"). High churn risk.`
         : `Elevated customer hostility / churn risk identified with high confidence (${confidence}%).`;
       recommendedAction = detectedRawAnger.length > 0
-        ? 'Engage with de-escalation protocol immediately. Preserve verbatim transcript without censorship to resolve root grievance.'
+        ? 'Engage with de-escalation protocol immediately to address and resolve the customer root grievance.'
         : 'Issue priority callback ticket and grant Level 2 agent authority for concession or full refund.';
       suggestedResponse = `"Dear ${customerName}, please accept our sincere apologies for the trouble you experienced. We are prioritizing your case right now with our senior dispatch team."`;
     } else {
@@ -317,12 +317,12 @@ export function analyzeEmotionLocally(
   switch (primaryEmotion) {
     case 'anger':
       explanation = detectedRawAnger.length > 0
-        ? `Customer demonstrates acute anger and exasperation with unredacted strong language ("${detectedRawAnger.slice(0, 3).join('", "')}"). Uncensored verbatim customer text is preserved for direct supervisory de-escalation.`
+        ? `Customer demonstrates acute anger and vocal exasperation ("${detectedRawAnger.slice(0, 3).join('", "')}"). Immediate supervisory de-escalation recommended.`
         : `Customer demonstrates acute anger driven by perceived failure or mistreatment. Emphatic language and key escalation signals detected.`;
       break;
     case 'frustration':
       explanation = detectedRawAnger.length > 0
-        ? `Customer is experiencing severe friction and vocal exasperation ("${detectedRawAnger.slice(0, 3).join('", "')}"). Verbatim text preserved for escalation.`
+        ? `Customer is experiencing severe friction and vocal exasperation ("${detectedRawAnger.slice(0, 3).join('", "')}"). Priority resolution required.`
         : `Customer is facing barriers or repeated obstacles causing notable irritation and loss of patience.`;
       break;
     case 'happiness':

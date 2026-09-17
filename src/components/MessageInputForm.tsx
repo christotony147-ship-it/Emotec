@@ -248,16 +248,6 @@ export const MessageInputForm: React.FC<Props> = ({ onSubmit, isLoading }) => {
             className="w-full bg-slate-950/90 border border-slate-700 rounded-xl p-3.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 leading-relaxed font-sans"
           />
 
-          {/* Uncensored Language Processing Guarantee */}
-          <div className="flex items-center gap-2 mt-2 px-1 text-[11px] text-slate-400">
-            <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-[10px] shrink-0">
-              ✓
-            </span>
-            <span>
-              <strong className="text-slate-300">Uncensored Analysis:</strong> Strong language like <em>fuck</em>, <em>hell</em>, and <em>sucks</em> is preserved verbatim as authentic customer anger signals without masking or censorship.
-            </span>
-          </div>
-
           {error && (
             <p className="text-xs text-rose-400 mt-1.5 flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5 shrink-0" />

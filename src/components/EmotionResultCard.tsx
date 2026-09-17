@@ -177,14 +177,9 @@ Rationale: ${result.explanation}`;
 
         {/* Analyzed Message Quote Box */}
         <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800 text-sm">
-          <div className="flex items-center justify-between mb-1.5">
-            <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-              <MessageSquare className="w-3.5 h-3.5 text-slate-400" />
-              Analyzed Customer Text
-            </div>
-            <span className="text-[10px] font-semibold text-emerald-400/90 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full flex items-center gap-1">
-              ✓ Uncensored Verbatim Transcript
-            </span>
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+            <MessageSquare className="w-3.5 h-3.5 text-slate-400" />
+            Analyzed Customer Text
           </div>
           <p className="text-slate-200 italic font-mono text-sm leading-relaxed">
             "{result.text}"
