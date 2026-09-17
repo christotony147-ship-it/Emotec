@@ -1,0 +1,7 @@
+{
+  "name": "emotech",
+  "description": "Customer emotion detection and trend monitoring platform with real-time sentiment analysis, confidence scoring, and supervisor escalation alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
